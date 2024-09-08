@@ -1,0 +1,117 @@
+/* Réinitialisation des marges et choix de police */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 15px; /* Ajout de marges latérales */
+}
+
+/* Style de la section d'en-tête */
+.header-section {
+    background-color: #2a1dd7;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style du texte dans l'en-tête */
+.header-text {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style de l'image dans l'en-tête */
+.header-text img {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Style du titre dans l'en-tête */
+.header-text h1 {
+    margin: 0;
+    font-size: 24px;
+    display: inline;
+}
+
+/* Style du menu horizontal */
+.horizontal-menu {
+    background-color: #2a1dd7;
+}
+
+/* Style de la liste et des éléments du menu */
+.horizontal-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #2a1dd7;
+    padding: 10px 0;
+}
+
+.horizontal-menu li {
+    display: inline;
+}
+
+/* Style des liens du menu */
+.horizontal-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 18px; /* Augmenter la taille de la police des liens du menu */
+}
+
+/* Style du séparateur */
+.separator {
+    height: 20px;
+    background: linear-gradient(to right, #2a1dd7, #f0f0f0, #2a1dd7);
+    border: none;
+}
+
+/* Style du contenu principal */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style de la bannière violette */
+.purple-banner {
+    background-color: #1c0de7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Style du titre de la bannière */
+.purple-banner h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+/* Style du texte de la bannière */
+.purple-banner p {
+    font-size: 20px; /* Augmenter la taille de la police des paragraphes */
+}
+
+/* Style du texte du contenu */
+.text-content {
+    width: 100%;
+    float: none;
+    margin: 0 auto;
+    text-align: justify; 
+}
+
+/* Style de la liste des qualités */
+.text-content ul li {
+    font-size: 20px; /* Augmenter la taille de la police des listes */
+}
+
+/* Style de l'image à droite du profil */
+.profile-image-right {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
