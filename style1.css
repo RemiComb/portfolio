@@ -1,4 +1,10 @@
 /* Réinitialisation des marges et choix de police */
+.purple-banner a {
+    color: white; /* Choisis une couleur visible comme blanc */
+    text-decoration: underline; /* Pour souligner le lien et le rendre plus visible */
+}
+
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -115,3 +121,12 @@ body {
     border-radius: 50%;
     margin-left: 10px;
 }
+
+.competence-image-small {
+    width: 70%; /* Réduction légère de la taille */
+    max-width: 350px; /* Ajustement de la largeur maximale */
+    height: auto; /* Maintien du ratio */
+    display: block;
+    margin: 0 auto;
+}
+
