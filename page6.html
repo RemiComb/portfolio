@@ -1,87 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
-    <style>
-        .competence-image {
-            max-width: 40%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .image-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .image-caption {
-            text-align: center;
-            margin-top: 10px;
-            font-style: italic;
-        }
-
-        /* Nouvelle classe pour l'image ze.png */
-        .large-image {
-            max-width: 80%; /* Par exemple, 80% de la largeur du conteneur */
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-    </style>
-    <title>Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Divers - Portfolio Rémi Combette</title>
+    <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
-    <header class="header-section">
-        <div class="header-text">
-            <img src="p250.jpg" alt="Photo" class="profile-image">
-            <h1>Portfolio de Rémi Combette</h1>
-            <h2>Étudiant en 2ème année de BUT Réseaux et Télécommunications parcours Cybersécurité</h2>
+    <header>
+        <div class="header-container">
+            <img src="p250.jpg" alt="Photo de profil" class="profile-img" />
+            <div class="header-text">
+                <h1>Portfolio de Rémi Combette</h1>
+                <p>Étudiant en 2ème année de BUT Réseaux & Télécoms - parcours Cybersécurité</p>
+            </div>
         </div>
     </header>
-    <nav class="horizontal-menu">
+
+    <nav class="nav-menu">
         <ul>
-            <li><a href="index.html" class="active">À propos de moi</a></li>
+            <li><a href="index.html">À propos de moi</a></li>
             <li><a href="page2.html">Formation</a></li>
-            <li><a href="page3.html">Expériences professionnelles</a></li>
+            <li><a href="page3.html">Expériences</a></li>
             <li><a href="page4.html">Compétences</a></li>
             <li><a href="page5.html">Projets</a></li>
-            <li><a href="page6.html">Divers</a></li>
+            <li><a href="page6.html" class="active">Divers</a></li>
             <li><a href="page7.html">Contact</a></li>
             <li><a href="page8.html">CV</a></li>
         </ul>
     </nav>
-    <div class="separator"></div>
-    <div class="content">
-        <div class="purple-banner">
-            <h2>Divers</h2>
-            <h3>Joueur compétitif e-sport</h3>
-            <p style="text-align: justify;">
-                Entre 2013 et 2021, j'ai participé à de nombreuses <B>compétitions</B> à travers le monde sur le jeu vidéo Pokémon. Pour gagner : beaucoup d'entraînement, de la stratégie, de la créativité et un peu de chance.
-            </p>
-            <p style="text-align: justify;">
-                Mon meilleur résultat était lors du championnat du monde 2019 à Washington D.C. où j'ai terminé 11ème de ma catégorie. Au total, la compétition rassemblait 7 600 joueurs.
-            </p>
-            <p style="text-align: justify;">
-                Je continue aujourd'hui à participer à certains événements en rencontrant de nouveaux joueurs.
-            </p>
-            <div class="image-container">
-                <img src="pokemon-2019-european-international-tournament.webp" alt="Pokémon Image" class="competence-image">
-                <p class="image-caption">Photo du championnat du monde 2019.</p>
-            </div><br>
 
-            <h3>Football / Rugby</h3>
-            <p style="text-align: justify;">
-                Mes deux sports de cœur sont le <B>football</B> et le <B>rugby</B>. Je suis un grand passionné de football, en particulier les grands championnats européens comme la Premier League où j'ai eu l'occasion de voir quelques matchs en vrai. C'est aussi le cas pour le rugby, sport demandant beaucoup de discipline que j'ai pratiqué pendant 6 ans.
-            </p>
-            <p style="text-align: justify;">
-                Ci-dessous une photo du stade d'Aston Villa, mon club de football préféré.
-            </p>
-            <div class="image-container">
-                <img src="aston.jpg" alt="Stade d'Aston Villa" class="competence-image">
-                <p class="image-caption">Photo du stade d'Aston Villa.</p>
-    </div>
+    <main>
+        <section class="banner">
+            <h2>Divers</h2>
+
+            <div class="project-block">
+                <h3>Joueur compétitif e-sport</h3>
+                <p>
+                    De 2013 à 2021, j’ai participé à de nombreuses <strong>compétitions internationales</strong> sur le jeu Pokémon. 
+                    J’ai notamment terminé <strong>11ème mondial</strong> lors du championnat du monde 2019 à Washington D.C. sur plus de 7 600 joueurs.
+                    Ce type de compétition demande stratégie, créativité, rigueur et sang-froid.
+                </p>
+                <p>Je participe encore aujourd’hui à des événements occasionnels pour le plaisir de la rencontre et du défi.</p>
+                <div class="image-container">
+                    <img src="pokemon-2019-european-international-tournament.webp" alt="Championnat du monde Pokémon" class="competence-image" />
+                    <p class="image-caption">Photo du championnat du monde 2019</p>
+                </div>
+            </div>
+
+            <div class="project-block">
+                <h3>Football & Rugby</h3>
+                <p>
+                    Mes deux sports de cœur sont le <strong>football</strong> et le <strong>rugby</strong>. Je suis un passionné de football, en particulier la <strong>Premier League</strong>, où j’ai pu assister à plusieurs matchs. 
+                    Le rugby m’a également beaucoup appris sur la <strong>discipline</strong> et le <strong>respect du collectif</strong>, sport que j’ai pratiqué durant 6 ans.
+                </p>
+                <p>Voici une photo du stade d’Aston Villa, mon club préféré.</p>
+                <div class="image-container">
+                    <img src="aston.jpg" alt="Stade d'Aston Villa" class="competence-image" />
+                    <p class="image-caption">Stade d'Aston Villa</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rémi Combette • Portfolio personnel</p>
+    </footer>
 </body>
 </html>

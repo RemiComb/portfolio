@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
-    <title>Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Compétences - Portfolio Rémi Combette</title>
+    <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
-    <header class="header-section">
-        <div class="header-text">
-            <img src="p250.jpg" alt="Photo" class="profile-image">
-            <h1>Portfolio de Rémi Combette</h1>
-            <h2>Étudiant en 2ème année de BUT Réseaux et Télécommunications parcours Cybersécurité</h2>
+    <header>
+        <div class="header-container">
+            <img src="p250.jpg" alt="Photo de profil" class="profile-img" />
+            <div class="header-text">
+                <h1>Portfolio de Rémi Combette</h1>
+                <p>Étudiant en 2ème année de BUT Réseaux & Télécoms - parcours Cybersécurité</p>
+            </div>
         </div>
     </header>
-    <nav class="horizontal-menu">
+
+    <nav class="nav-menu">
         <ul>
-            <li><a href="index.html" class="active">À propos de moi</a></li>
-            <li><a href="page2.html">Formation</a></li>
-            <li><a href="page3.html">Expériences professionnelles</a></li>
+            <li><a href="index.html">À propos de moi</a></li>
+            <li><a href="page2.html" class="active">Formation</a></li>
+            <li><a href="page3.html">Expériences</a></li>
             <li><a href="page4.html">Compétences</a></li>
             <li><a href="page5.html">Projets</a></li>
             <li><a href="page6.html">Divers</a></li>
@@ -26,28 +29,36 @@
             <li><a href="page8.html">CV</a></li>
         </ul>
     </nav>
-    <div class="separator"></div>
-    <div class="content">
-        <div class="purple-banner">
+
+    <main>
+        <section class="banner">
             <h2>Formation</h2>
-            <p>
-                <strong>2023 -</strong><br>
-                BUT2 Réseaux et Télécommunications, FI parcours Cybersécurité<br>
-                <span style="font-size: smaller; font-style: italic;">Université Clermont Auvergne (63)</span><br>
-                <span style="font-size: smaller; font-style: italic;">Première année validée</span><br><br>
-                <span style="font-size: smaller; font-style: italic;">Compétences : cybersécurité, réseaux, télécommunications, programmation, téléphonie</span><br><br>
 
-                <strong>2022 - 2023</strong><br>
-                Double licence MIASHS / Économie<br>
-                <span style="font-size: smaller; font-style: italic;">Université Toulouse Capitole (31)</span><br>
-                <span style="font-size: smaller; font-style: italic;">Compétences : gestion, analyse de données - langages : Python, R, Bash</span><br><br>
+            <div class="formation-block">
+                <h3>2023 -</h3>
+                <p><strong>BUT2 Réseaux et Télécommunications, parcours Cybersécurité</strong></p>
+                <p class="formation-location">Université Clermont Auvergne (63) – Première année validée</p>
+                <p class="formation-skills">Cybersécurité, réseaux, télécommunications, programmation, téléphonie</p>
+            </div>
 
-                <strong>2022</strong><br>
-                Baccalauréat général mention Très Bien<br>
-                <span style="font-size: smaller; font-style: italic;">Lycée Sainte-Cécile (38)</span><br>
-                <span class="smaller-text">Spécialités Mathématiques Expertes / Sciences Économiques et Sociales</span><br>
-            </p>
-        </div>
-    </div>
+            <div class="formation-block">
+                <h3>2022 - 2023</h3>
+                <p><strong>Double licence MIASHS / Économie</strong></p>
+                <p class="formation-location">Université Toulouse Capitole (31)</p>
+                <p class="formation-skills">Gestion, analyse de données – langages : Python, R, Bash</p>
+            </div>
+
+            <div class="formation-block">
+                <h3>2022</h3>
+                <p><strong>Baccalauréat général mention Très Bien</strong></p>
+                <p class="formation-location">Lycée Sainte-Cécile (38)</p>
+                <p class="formation-skills">Spécialités : Mathématiques expertes, Sciences Économiques et Sociales</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rémi Combette • Portfolio personnel</p>
+    </footer>
 </body>
 </html>

@@ -1,117 +1,373 @@
-/* Réinitialisation des marges et choix de police */
-body {
+/* Réinitialisation */
+* {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 0 15px; /* Ajout de marges latérales */
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Style de la section d'en-tête */
-.header-section {
+/* Corps global */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #e9ecff, #f7f9ff);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============ HEADER ============ */
+header {
+    background: linear-gradient(to right, #2a1dd7, #5a4fff);
+    color: white;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.header-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.profile-img {
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    image-rendering: auto;
+    image-rendering: smooth;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.header-text h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.header-text p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* ============ MENU DE NAVIGATION ============ */
+.nav-menu {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-bottom: 3px solid #2a1dd7;
+}
+
+.nav-menu ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    list-style: none;
+    gap: 10px;
+}
+
+.nav-menu a {
+    color: #2a1dd7;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 16px;
+    font-size: 17px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu .active {
     background-color: #2a1dd7;
     color: white;
-    text-align: center;
-    padding: 20px;
 }
 
-/* Style du texte dans l'en-tête */
-.header-text {
-    text-align: center;
-    padding: 20px;
-}
-
-/* Style de l'image dans l'en-tête */
-.header-text img {
-    max-width: 100px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-/* Style du titre dans l'en-tête */
-.header-text h1 {
-    margin: 0;
-    font-size: 24px;
-    display: inline;
-}
-
-/* Style du menu horizontal */
-.horizontal-menu {
-    background-color: #2a1dd7;
-}
-
-/* Style de la liste et des éléments du menu */
-.horizontal-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* ============ CONTENU PRINCIPAL ============ */
+main {
+    flex: 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.banner {
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    max-width: 900px;
+    width: 100%;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.banner h2 {
+    font-size: 26px;
+    color: #2a1dd7;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.banner p {
+    line-height: 1.8;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* ============ PIED DE PAGE ============ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f2f8;
+    font-size: 0.9em;
+    color: #666;
+    border-top: 1px solid #ddd;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+}
+
+/* ============ ANIMATION ============ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== Formation ========== */
+.formation-block {
+    margin-bottom: 30px;
+}
+
+.formation-block h3 {
+    color: #2a1dd7;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.formation-block p {
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.formation-location {
+    font-style: italic;
+    color: #555;
+}
+
+.formation-skills {
+    color: #333;
+    font-size: 16px;
+}
+
+/* ========== Expériences ========== */
+.experience-block {
+    margin-bottom: 40px;
+}
+
+.experience-block h3 {
+    color: #2a1dd7;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.experience-block p {
+    font-size: 17px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.image-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.experience-image {
+    max-width: 60%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 10px 0;
+}
+
+.image-caption {
+    font-style: italic;
+    font-size: 15px;
+    color: #555;
+}
+
+/* ========== Compétences ========== */
+.competence-block {
+    margin-bottom: 40px;
+}
+
+.competence-block h3 {
+    color: #2a1dd7;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.competence-block p {
+    font-size: 17px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.competence-block ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.competence-block ul li {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.competence-image {
+    width: 260px;
+    max-width: 80%;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.image-caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    color: #555;
+    margin-top: -5px;
+}
+
+/* ========== Projets ========== */
+.project-block {
+    margin-bottom: 50px;
+}
+
+.project-block h3 {
+    color: #2a1dd7;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.project-block p {
+    font-size: 17px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.competence-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Divers / Images */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.competence-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: block;
+    margin: 10px auto;
+}
+
+.image-caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* ========== Contact ========== */
+.contact-info {
+    font-weight: bold;
+    color: #2a1dd7;
+    font-size: 17px;
+}
+
+.banner a {
+    color: #2a1dd7;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.banner a:hover {
+    color: #1c0de7;
+}
+
+/* ========== Bouton de téléchargement ========== */
+.download-button {
+    display: inline-block;
+    padding: 12px 20px;
     background-color: #2a1dd7;
-    padding: 10px 0;
-}
-
-.horizontal-menu li {
-    display: inline;
-}
-
-/* Style des liens du menu */
-.horizontal-menu a {
-    text-decoration: none;
     color: white;
     font-weight: bold;
-    padding: 10px;
-    font-size: 18px; /* Augmenter la taille de la police des liens du menu */
-}
-
-/* Style du séparateur */
-.separator {
-    height: 20px;
-    background: linear-gradient(to right, #2a1dd7, #f0f0f0, #2a1dd7);
-    border: none;
-}
-
-/* Style du contenu principal */
-.content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Style de la bannière violette */
-.purple-banner {
-    background-color: #1c0de7;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    overflow: hidden;
     border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
 }
 
-/* Style du titre de la bannière */
-.purple-banner h2 {
-    margin-bottom: 10px;
-    font-size: 28px;
+.download-button:hover {
+    background-color: #1c0de7;
 }
 
-/* Style du texte de la bannière */
-.purple-banner p {
-    font-size: 20px; /* Augmenter la taille de la police des paragraphes */
+.cv-center {
+    text-align: center;
+    margin-top: 30px;
 }
 
-/* Style du texte du contenu */
-.text-content {
-    width: 100%;
-    float: none;
-    margin: 0 auto;
-    text-align: justify; 
+.experience-block, .experience-block p, .experience-block ul, .experience-block li {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+.custom-list {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 10px;
 }
 
-/* Style de la liste des qualités */
-.text-content ul li {
-    font-size: 20px; /* Augmenter la taille de la police des listes */
-}
-
-/* Style de l'image à droite du profil */
-.profile-image-right {
-    max-width: 100px;
-    border-radius: 50%;
-    margin-left: 10px;
+.custom-list li {
+    margin-bottom: 8px;
+    font-size: 1.05em;
+    line-height: 1.6;
 }
