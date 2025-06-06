@@ -1,101 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
-    <style>
-        .competence-image {
-            width: 260px;
-        }
-    </style>
-    <title>Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Compétences - Portfolio Rémi Combette</title>
+    <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
-    <header class="header-section">
-        <div class="header-text">
-            <img src="p250.jpg" alt="Photo" class="profile-image">
-            <h1>Portfolio de Rémi Combette</h1>
-            <h2>Étudiant en 2ème année de BUT Réseaux et Télécommunications parcours Cybersécurité</h2>
+    <header>
+        <div class="header-container">
+            <img src="p250.jpg" alt="Photo de profil" class="profile-img" />
+            <div class="header-text">
+                <h1>Portfolio de Rémi Combette</h1>
+                <p>Étudiant en 2ème année de BUT Réseaux & Télécoms - parcours Cybersécurité</p>
+            </div>
         </div>
     </header>
-    <nav class="horizontal-menu">
+
+    <nav class="nav-menu">
         <ul>
-            <li><a href="index.html" class="active">À propos de moi</a></li>
+            <li><a href="index.html">À propos de moi</a></li>
             <li><a href="page2.html">Formation</a></li>
-            <li><a href="page3.html">Expériences professionnelles</a></li>
-            <li><a href="page4.html">Compétences</a></li>
+            <li><a href="page3.html">Expériences</a></li>
+            <li><a href="page4.html" class="active">Compétences</a></li>
             <li><a href="page5.html">Projets</a></li>
             <li><a href="page6.html">Divers</a></li>
             <li><a href="page7.html">Contact</a></li>
             <li><a href="page8.html">CV</a></li>
         </ul>
     </nav>
-    <div class="separator"></div>
-    <div class="content">
-        <div class="purple-banner">
-            <h2>Compétences</h2><br>
-            <div class="competences-section">
-                <h3 class="bold-big-text">Compétences linguistiques</h3>
-                <p class="small-text">
-                    <strong>Anglais</strong> - Niveau B2<br>
-                </p>
-            </div><br>
-            <div class="competences-section">
-                <h3 class="bold-big-text">Compétences techniques</h3>
-                <p class="small-text">
-                    <strong>Cybersécurité</strong><br>
-                    <img src="jau3.png" alt="Réseaux Image" class="competence-image"><br>
-                    En deuxième année, nous apprenons le <B>Pentesting</B> à travers des travaux pratiques consistant à trouver les failles de sécurité dans une application donnée et établir des scores de vulnérabilité. Nous avons également appris la configuration de <B>pare-feu</B> pour une sécurisation physique.<br>
-                    <img src="fw.png" alt="Réseaux Image" class="competence-image"> <p class="image-caption">Pare-feu Stormshield utilisé en cours.</p>
-                </p>
-                <p class="small-text"><br>
-                    <strong>Réseaux</strong><br>
-                    <img src="jau1.png" alt="Réseaux Image" class="competence-image"><br>
-                    J'ai appris la configuration des <B>équipements réseau</B> (routeur, switch) et les bases de <B>l'administration système</B> à travers des travaux pratiques. L'un portait sur la <B>sécurité</B> de Telnet, un protocole de communication entre ordinateurs.
-                    J'ai saisi un mot de passe via Telnet sur un ordinateur. Puis en analysant les échanges de données avec le logiciel Wireshark, j'ai rapidement mis en évidence les vulnérabilités de Telnet en retrouvant ce mot de passe dans le contenu des trames transitant dans le réseau. <br><br>
-                    <img src="Capture d’écran du 2024-06-04 15-36-02.png" alt="Réseaux Image" class="competence-image"> <p class="image-caption">Illustration du protocol Telnet.</p>
-                </p>
-                <p class="small-text"><br>
-                    <strong>Programmation</strong><br>
-                    <img src="jau3.png" alt="Réseaux Image" class="competence-image"><br>
-                    Langages : <B>Java, php, JavaScript, MySQL, Python, BASH, HTML/CSS</B><br>
-                    Au cours du troisième semestre, j'ai <B>conçu</B> et <B>développé</B> une application Android de messagerie permettant aux utilisateurs de se créer un compte pour envoyer des messages instantanés à leurs amis avec un pseudonyme et une photo de profil personalisable. Ce projet est entièrement réalisé avec Java grâce à Android Studio.<br>
-                </p>
-                <p class="small-text"><br>
-                    <strong>Télécommunications</strong><br>
-                    <img src="jau2.png" alt="Réseaux Image" class="competence-image"><br>
-                    En télécommunications, le cours met l'accent sur l'<B>électricité</B> et les <B>transmissions</B> (analyse de signaux). Lors d'un TP en binôme, nous avons déterminé le temps de propagation d'un signal à travers un câble coaxial de 100 mètres avec un oscilloscope. En comparant les signaux transmis à travers un câble de 100 mètres et un câble court, nous avons déduit le temps de propagation en observant le décalage.<br>
-<br><img src="aze.png" alt="Réseaux Image" class="competence-image"> <p class="image-caption">Retard du signal ayant parcouru le câble coaxial de 100 mètres.</p>
-                </p>
-              <p class="small-text"><br>
-                  <strong>Téléphonie</strong><br>
-                  <img src="jau2.png" alt="Réseaux Image" class="competence-image"><br>
-                J’ai abordé en téléphonie les anciens systèmes de réseaux téléphoniques <B>RTC</B>, ainsi que les nouveaux utilisant le <B>protocole IP</B>. J’ai appris dans cette compétence le fonctionnement du réseau téléphonique au niveau national, les différents protocoles de communication utilisés, les équipements téléphoniques actuels et anciens comme les IPBX, et la configuration de téléphone IP, softphone et call server, 
-<br><br><br>
-              </p>
-              
+
+    <main>
+        <section class="banner">
+            <h2>Compétences</h2>
+
+            <div class="competence-block">
+                <h3>Compétences linguistiques</h3>
+                <p><strong>Anglais :</strong> niveau B2</p>
             </div>
-            <div class="competences-section">
-                <h3 class="bold-big-text">Qualités</h3>
-                <p class="small-text">
-                    <strong>Enthousiasme</strong><br>
-                    Les projets effectués en groupe sont parfois longs et nécessitent donc une bonne communication et de la bonne humeur pour se motiver à travailler. J'aime faire en sorte que l'ambiance du groupe soit toujours bonne.
-                </p>
-                <p class="small-text">
-                    <strong>Rigueur</strong><br>
-                    Les équipements utilisés lors des travaux pratiques demandent minutie, patience et rigueur. De plus, j'ai appris à être rigoureux lors de projets nécessitant une attention particulière pour chaque détail.
-                </p>
-                <p class="small-text">
-                    <strong>Ouverture d'esprit</strong><br>
-                    Grâce aux nombreux travaux de groupe (notamment les TP), j'ai appris à m'adapter et m'ouvrir aux autres pour accomplir efficacement les tâches.
-                </p>
-                <p class="small-text">
-                    <strong>Créativité</strong><br>
-                    Les problèmes rencontrés lors des projets et exercices nous obligent parfois à faire preuve de créativité quand la solution ne se trouve pas sur internet ou dans les manuels d'utilisation.
-                </p>
+
+            <div class="competence-block">
+                <h3>Cybersécurité</h3>
+                <img src="jau3.png" alt="Cybersécurité" class="competence-image" />
+                <p>Apprentissage du pentest à travers des TP : identification de failles, évaluation de la sécurité d’applications, configuration de pare-feux physiques (Stormshield).</p>
+                <img src="fw.png" alt="Pare-feu Stormshield" class="competence-image" />
+                <p class="image-caption">Pare-feu Stormshield utilisé en cours</p>
             </div>
-        </div>
-    </div>
+
+            <div class="competence-block">
+                <h3>Réseaux</h3>
+                <img src="jau1.png" alt="Compétence Réseaux" class="competence-image" />
+                <p>Configuration d’équipements réseau (routeurs, switchs), base de l’administration système, étude du protocole Telnet et de ses failles grâce à Wireshark.</p>
+                <img src="Capture d’écran du 2024-06-04 15-36-02.png" alt="Telnet" class="competence-image" />
+                <p class="image-caption">Illustration du protocole Telnet</p>
+            </div>
+
+            <div class="competence-block">
+                <h3>Programmation</h3>
+                <img src="jau3.png" alt="Programmation" class="competence-image" />
+                <p>Langages : Java, PHP, JavaScript, MySQL, Python, BASH, HTML/CSS. Projet réalisé : application Android de messagerie avec profil, photo et système de chat en Java (Android Studio).</p>
+            </div>
+
+            <div class="competence-block">
+                <h3>Télécommunications</h3>
+                <img src="jau2.png" alt="Télécom" class="competence-image" />
+                <p>Analyse de signaux, électricité, TP de mesure du temps de propagation d’un signal via câble coaxial (oscilloscope).</p>
+                <img src="aze.png" alt="Signal" class="competence-image" />
+                <p class="image-caption">Retard du signal dans un câble coaxial de 100 mètres</p>
+            </div>
+
+            <div class="competence-block">
+                <h3>Téléphonie</h3>
+                <img src="jau2.png" alt="Téléphonie" class="competence-image" />
+                <p>Étude des réseaux téléphoniques RTC/IP, protocole SIP, configuration d’équipements IPBX, softphones, call servers, etc.</p>
+            </div>
+
+            <div class="competence-block">
+                <h3>Qualités</h3>
+                <ul>
+                    <li><strong>Enthousiasme :</strong> favorise la motivation dans les projets de groupe.</li>
+                    <li><strong>Rigueur :</strong> indispensable pour manipuler des équipements et suivre les procédures.</li>
+                    <li><strong>Ouverture d'esprit :</strong> facilitée par les nombreux travaux en binôme ou en groupe.</li>
+                    <li><strong>Créativité :</strong> utile pour résoudre des problèmes sans solution évidente ou toute faite.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rémi Combette • Portfolio personnel</p>
+    </footer>
 </body>
 </html>
