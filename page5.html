@@ -1,109 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
-    <style>
-        .competence-image {
-            max-width: 70%;
-            height: auto;
-        }
-    </style>
-    <title>Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Projets - Portfolio Rémi Combette</title>
+    <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
-    <header class="header-section">
-        <div class="header-text">
-            <img src="p250.jpg" alt="Photo" class="profile-image">
-            <h1>Portfolio de Rémi Combette</h1>
-            <h2>Étudiant en 2ème année de BUT Réseaux et Télécommunications parcours Cybersécurité</h2>
+    <header>
+        <div class="header-container">
+            <img src="p250.jpg" alt="Photo de profil" class="profile-img" />
+            <div class="header-text">
+                <h1>Portfolio de Rémi Combette</h1>
+                <p>Étudiant en 2ème année de BUT Réseaux & Télécoms - parcours Cybersécurité</p>
+            </div>
         </div>
     </header>
-    <nav class="horizontal-menu">
+
+    <nav class="nav-menu">
         <ul>
-            <li><a href="index.html" class="active">À propos de moi</a></li>
+            <li><a href="index.html">À propos de moi</a></li>
             <li><a href="page2.html">Formation</a></li>
-            <li><a href="page3.html">Expériences professionnelles</a></li>
+            <li><a href="page3.html">Expériences</a></li>
             <li><a href="page4.html">Compétences</a></li>
-            <li><a href="page5.html">Projets</a></li>
+            <li><a href="page5.html" class="active">Projets</a></li>
             <li><a href="page6.html">Divers</a></li>
             <li><a href="page7.html">Contact</a></li>
             <li><a href="page8.html">CV</a></li>
         </ul>
     </nav>
-    <div class="separator"></div>
-    <div class="content">
-        <div class="purple-banner">
+
+    <main>
+        <section class="banner">
             <h2>Projets</h2>
 
-            <p class="small-text">
-                <strong>Projet Pentest</strong><br><br>
-            <B>Contexte</B> : Ce projet a été réalisé en binôme et en autonomie.<br>
-                
-                <B>Objectif</B> : Chercher des failles de sécurité sur des machines virtuelles cibles pour faire une escalade de privilèges et accéder à un compte administrateur/root<br> 
-            <B>Travail réalisé</B> : On démarre le projet avec 5 machines à "Pentester" de la plus simple à la plus difficile. <br>
-            Une des plus marquantes était la dernière, la machine Black Pearl. J'ai commencé par vérifier ses ports ouverts grâce à la commande Nmap. Un service HTTP est actif donc je me rends sur son site web. Je cherche alors dans le code source et je trouve un nom de domaine (ci-dessous le code source).  <br>  <br> 
-            <img src="p1.png" alt="A" class="competence-image-small"><br><br> 
-                <br> Je rajoute ce nom de domaine dans mon fichier resolv.conf et j'accède à un autre site web hébergé en parallèle. J'effectue ensuite un Gobuster, une attaque par force brute pour chercher des répertoires cachés sur ce service HTTP. Je trouve une nouvelle page web NavigateCMS.<br><br>
-                <img src="navi.png" alt="A" class="competence-image-small"><br><br> 
-                <br> Je trouve par la suite une vulnérabilité sur le service NavigateCMS grâce à l'outil Metasploit. J'utilise ainsi cet exploit et le paramétrant correctement, ce qui me permet d'accéder au Shell de la machine. J'effectue enfin une escalade de privilèges grâce à LinPEAS pour devenir administrateur.<br><br>
-                <B>Résultat</B> : Je suis parvenu avec mon binôme à avoir les droits administrateurs sur 4 machines sur 5 en rédigeant un rapport détaillé sur comment on a procédé pour chaque machine.<br>
-                Ce projet m'a permis une meilleure compréhension des failles de sécurité courantes et de rédiger un rapport sur plusieurs mois expliquant au fil de l'eau mes idées et mes difficultés.
-                <br> <br> 
+            <div class="project-block">
+                <h3>Projet Pentest</h3>
+                <p><strong>Objectif :</strong> identifier des failles sur des VM, escalader les privilèges, et obtenir un accès root.</p>
+                <p>Exploitation d’une faille NavigateCMS via Metasploit sur une machine "Black Pearl" après analyse Nmap, force brute avec Gobuster, et accès Shell via exploit.</p>
+                <img src="p1.png" alt="Source code" class="competence-image" />
+                <img src="navi.png" alt="NavigateCMS" class="competence-image" />
+                <p><strong>Résultat :</strong> 4 machines compromises sur 5, rédaction d’un rapport complet sur plusieurs mois.</p>
+            </div>
 
-                <p class="small-text">
-                    <strong>Projet Android Studio (langage Java)</strong><br><br>
-                <B>Contexte</B> : Ce projet a été réalisé seul et en autonomie.<br>
-                    
-                    <B>Objectif</B> : Concevoir une application de messagerie instantanée d'entreprise en Java sur un système Android.<br> 
-                <B>Travail réalisé</B> : Je me suis d'abord organisé avec la liste des différentes classes Java qui seront nécessaires, la prise en main du logiciel Android Studio et les différentes fonctionnalités à implémenter.<br>
-                    <br> J'ai conçu une page d'accueil où l'utilisateur peut créer un compte et se connecter.  <br> <br> 
-                    <img src="acc.png" alt="A" class="competence-image-small"><br><br> 
-                    <br> Dans la page d'enregistrement, l'utilisateur entre un nom qui doit être unique (vérification dans une base de données avec SQLite), une adresse mail valide et un mot de passe sécurisé avec un indicateur dynamique.<br><br> 
-                    <img src="regi.png" alt="A" class="competence-image-small"><br><br>
-                    <br> Enfin, la page principale de l'application où l'on peut envoyer un message qui apparaîtra avec notre nom, d'une manière séparée des autres (en orange à droite), visible des autres utilisateurs et avec la possibilité d'être "Liké" grâce au bouton en cœur.<br><br> 
-                    <img src="mess.png" alt="A" class="competence-image-small"><br><br>
-                    <B>Résultat</B> : Application fonctionnelle, aucun problème technique et base de données qui permet de stocker les messages et les informations des utilisateurs.<br>
-                    Ce projet m'a permis de m'organiser de manière autonome sur plusieurs mois, et a renforcé mes compétences en langage Java et en gestion de base de données.
-                    <br> <br> 
+            <div class="project-block">
+                <h3>Application Android Studio (Java)</h3>
+                <p><strong>Objectif :</strong> concevoir une messagerie instantanée avec création de compte, login, envoi de messages et likes.</p>
+                <img src="acc.png" alt="Accueil" class="competence-image" />
+                <img src="regi.png" alt="Enregistrement" class="competence-image" />
+                <img src="mess.png" alt="Chat" class="competence-image" />
+                <p><strong>Résultat :</strong> application fonctionnelle avec base de données SQLite, validée sans bug.</p>
+            </div>
 
-            <p class="small-text">
-                <strong>Projet Intégratif</strong><br><br>
-            <B>Contexte</B> : Ce projet a été réalisé en groupe de cinq sous la direction d'un enseignant.<br>
-                
-                <B>Objectif</B> : Cette SAE a pour objectif d'utiliser l'ensemble des compétences acquises lors du BUT1 dans la mise en place d'un réseau fonctionnel pour une petite entreprise. <br> 
-            <B>Travail réalisé</B> : Dans un premier lieu, nous avons rédigé un document contenant l'ensemble des besoins de l'entreprise ainsi que les solutions techniques.<br>  Ci-dessous, un schéma du réseau avec les équipements minimum que nous devons mettre en place pour répondre aux besoins de l'entreprise.<br>  <br> 
-                <img src="ca.png" alt="Aquò's aqui Image" class="competence-image"><br><br> 
-                Ensuite, nous devions réaliser ce projet à l'aide de quatre ordinateurs, des serveurs (DHCP, DNS, web...), un routeur, un switch avec VLANs, un point d'accès wifi, des téléphones (physiques et virtuels) ainsi qu'un pare-feu. Cet ensemble d'équipements nous permet de mettre en place ce réseau d'entreprise fonctionnel, tout en garantissant une fiabilité et une sécurité élevées.
-                <br>
-            <B>Résultat</B> : Nous sommes parvenus à rendre notre réseau fonctionnel avec une gestion efficace des groupes d'utilisateurs grâce à Active Directory, ainsi que
-                    des logiciels préinstallés sur les postes de travail, un serveur d'appel, un analyseur de logs pour se protéger des attaques DHCP, un intranet permettant l'accès à la documentation et aux informations de l'entreprise, un service d'échange de fichiers, ainsi qu'un serveur mail interne à l'entreprise.
-                <br> <br> 
+            <div class="project-block">
+                <h3>Projet Intégratif</h3>
+                <p><strong>Objectif :</strong> concevoir un réseau d’entreprise complet à partir des besoins d’un client.</p>
+                <img src="ca.png" alt="Schéma réseau" class="competence-image" />
+                <p>Infrastructure mise en place : DHCP, DNS, Web, pare-feu, VLAN, Active Directory, serveur d’appel, intranet, serveur mail, etc.</p>
+                <p><strong>Résultat :</strong> réseau fonctionnel et sécurisé, prêt à l’emploi avec documentation.</p>
+            </div>
 
-            <p class="small-text">
-                <strong>Mettre en place une solution informatique pour l’entreprise</strong><br><br>
-            <B>Contexte</B> : Travail réalisé seul sous la direction d'un enseignant.<br>
-        <B>Ojectif</B> : Développer en <B>Full Stack</B> une application de support informatique pour l'université. Il faut qu’un utilisateur puisse créer un ticket de support puis suivre l’avancement du traitement de son ticket. L’administrateur peut lui consulter les tickets, établir des ordres de priorité et les affecter aux techniciens. Ce projet a été réalisé en grande partie en <B>JavaScript</B>. 
-    <B>Travail réalisé</B> : Il faut tout d'abord réaliser la partie <B>Frontend</B> permettant un affichage côté client comme le montre l'image ci-dessous où l'on peut également apercevoir un ticket créé pour un problème d'imprimante.   <br>  <br> 
-                <img src="zz.png" alt="Aquò's aqui Image" class="competence-image"><br><br> 
-                Ensuite, j'ai programmé la partie <B>Backend</B> et j'ai créé une base de données permettant de stocker les tickets avec MongoDB. J'ai également mis en place un serveur à l'aide d'Express. La difficulté principale ici résidait dans l'<B>optimisation</B> du code JavaScript nécessitant la création de plusieurs dossiers et fichiers reliés entre eux. Cela m'a permis d'apprendre comment mettre en place une application en Full Stack en utilisant des moyens d'optimisation courament utilisés dans le monde de l'entreprise pour rendre le code plus compréhensible. <br> Ci-dessous un extrait de code que j'ai écrit pour appeler des fonctions JavaScript présentes dans d'autres fichiers à des fins d'optimisation.<br><br>  <img src="zzz.png" alt="Aquò's aqui Image" class="competence-image"><br><br> 
-            <B>Résultat</B> : Je suis ainsi parvenu à rendre mon application fonctionnelle. Un utilisateur peut créer, supprimer et modifier ses tickets. L'administrateur peut lui avoir accès aux tickets afin de répondre à la demande.
+            <div class="project-block">
+                <h3>Application de support Full Stack</h3>
+                <p><strong>Objectif :</strong> créer une application de support utilisateur (ticketing) avec JS/MongoDB/Express.</p>
+                <img src="zz.png" alt="App tickets" class="competence-image" />
+                <img src="zzz.png" alt="Code JS" class="competence-image" />
+                <p><strong>Résultat :</strong> application fonctionnelle, tickets administrables et interfaçage optimisé.</p>
+            </div>
 
-                <br> <br> 
-            
-            <p class="small-text">
-                <strong>Construire un réseau informatique pour une petite structure</strong><br><br>
-            <B>Contexte</B> : Travail réalisé seul et en binôme sous la direction d'un enseignant.<br>
-            <B>Objectif</B> : Etre capable de concevoir un réseau informatique moderne. <br>
-            <B>Travail réalisé</B> : Premièrement, de façon autonome, nous avons appris à travers Packet Tracer la configuration d'un réseau sous l'adressage IPv6, le fonctionnement des protocoles <B>TCP</B> et <B>UDP</B>, ainsi que le système IPTABLES. <br> Ci-dessous un exemple de topologie réseau que nous avons dû configurer avec IPv6. <br>  <br> 
-                <img src="SAE11.png" alt="Aquò's aqui Image" class="competence-image"><br><br> 
-                Par la suite, nous avons utilisé ces connaissances théoriques lors de travaux pratiques en binôme pour les appliquer dans un réseau réel. Nous avons de plus appris à configurer des <B>serveurs</B> (notamment <B>DHCP</B> et <B>DNS</B>) et des clients (<B>SSH</B> et <B>FTP</B>). <br> L'ensemble de ces compétences couplé à un savoir théorique plus approfondi grâce à d'autres projets de réseau, nous a permis de concevoir des réseaux similaires à la topologie ci-dessous. <br><br>  <img src="z.png" alt="Aquò's aqui Image" class="competence-image"><br><br> 
-            <B>Résultat</B> : J'ai finalement réussi à configurer ce réseau et à le rendre fonctionnel. J'ai pu m'en assurer grâce à des tests de fonctionnement dont des ping et des captures de données à l'aide du logiciel Wireshark.
-                
-                <br> <br>       
-        </div>
-    </div>
+            <div class="project-block">
+                <h3>Projet réseau IPv6</h3>
+                <p><strong>Objectif :</strong> concevoir un réseau IPv6 fonctionnel avec Packet Tracer + implémentation réelle.</p>
+                <img src="SAE11.png" alt="Topo IPv6" class="competence-image" />
+                <img src="z.png" alt="Réseau final" class="competence-image" />
+                <p>Implémentation de DHCP, DNS, SSH, FTP, pare-feu et sécurisation via Wireshark.</p>
+                <p><strong>Résultat :</strong> réseau IPv6 fonctionnel validé par tests réels et captures.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rémi Combette • Portfolio personnel</p>
+    </footer>
 </body>
 </html>
-
