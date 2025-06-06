@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
-    <style>
-        .competence-image {
-            max-width: 20%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .image-caption {
-            text-align: center;
-            margin-top: 10px;
-            font-style: italic;
-        }
-    </style>
-    <title>Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Expériences - Portfolio Rémi Combette</title>
+    <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
-    <header class="header-section">
-        <div class="header-text">
-            <img src="p250.jpg" alt="Photo" class="profile-image">
-            <h1>Portfolio de Rémi Combette</h1>
-            <h2>Étudiant en 2ème année de BUT Réseaux et Télécommunications parcours Cybersécurité</h2>
+    <header>
+        <div class="header-container">
+            <img src="p250.jpg" alt="Photo de profil" class="profile-img" />
+            <div class="header-text">
+                <h1>Portfolio de Rémi Combette</h1>
+                <p>Étudiant en 2ème année de BUT Réseaux & Télécoms - parcours Cybersécurité</p>
+            </div>
         </div>
     </header>
-    <nav class="horizontal-menu">
+
+    <nav class="nav-menu">
         <ul>
-            <li><a href="index.html" class="active">À propos de moi</a></li>
+            <li><a href="index.html">À propos de moi</a></li>
             <li><a href="page2.html">Formation</a></li>
-            <li><a href="page3.html">Expériences professionnelles</a></li>
+            <li><a href="page3.html" class="active">Expériences</a></li>
             <li><a href="page4.html">Compétences</a></li>
             <li><a href="page5.html">Projets</a></li>
             <li><a href="page6.html">Divers</a></li>
@@ -40,34 +29,69 @@
             <li><a href="page8.html">CV</a></li>
         </ul>
     </nav>
-    <div class="separator"></div>
-    <div class="content">
-        <div class="purple-banner">
-            <h2>Expériences professionnelles</h2><br>
-            <p class="small-text">
-                <strong>2024</strong><br>
-                Jury aux Cordées de la Réussite au lycée Gergovie -
-                Clermont-Ferrand (63)
-<br><br>
-                L'objectif est d'aider des lycéens de filière professionelle spécialisée en informatique, pour leur soutenance de rapport de stage et de rapport d'alternance.<br>
-                Dans l'enceinte du lycée, j'ai assisté aux oraux de certains élèves en tant que jury en notant et en conseillant sur les améliorations à faire pour leur présentation. </p>       
-            <div class="image-container">
-                <img src="lyc.jpg" alt="Pokémon Image" class="competence-image">
-                <p class="image-caption">Lycée Gergovie</p>
-            </div><br>
-            <p class="small-text">
-                <strong>2023 (été)</strong><br>
-                Entreprise familiale Aquò's aqui - Lozère (48)<br><br>
-                Aquò's aqui est une étape sur l'un des chemins menant à Saint-Jacques-de-Compostelle. Les pèlerins et randonneurs font halte dans le petit village de Saint-Laurent de Muret pour y passer la nuit. L'objectif est de les <B>assister</B> et de <B>leur proposer du matériel et de la nourriture</B>.<br>
-                Cette expérience m'a familiarisé avec la <B>relation client</B> et le respect des <B>normes réglementaires strictes</B>. Tous les retours de mes prestations étaient <B>très satisfaisants</B>.
-            </p>
-            <div class="image-container">
-                <p class="image-caption">↓ Photo du stand de nourriture ↓</p>
-                <img src="aquo.jpg" alt="Aquò's aqui Image" class="competence-image">
+
+    <main>
+        <section class="banner">
+            <h2>Expériences professionnelles</h2>
+  <div class="experience-block">
+    <h3>Avril – Juin 2025 — Stage chez Noemis</h3>
+    <p><strong>Noemis – IP Technologies and Human Inside, Clermont-Ferrand (63)</strong></p>
+    <p>
+        Noemis est une entreprise spécialisée dans les solutions de vidéosurveillance et les infrastructures réseau.  
+        Le pôle service dans lequel je travaille intervient régulièrement pour configurer des ordinateurs destinés à la gestion de caméras ou au stockage de données vidéo. Ces machines, livrées vierges (sans système d’exploitation), doivent être configurées selon les besoins des clients (OS spécifique, configuration réseau, sessions multiples, etc.).
+    </p>
+    <p><strong>Sujet :</strong> Amélioration du système de déploiement MDT/WDS</p>
+    <p>
+        Le stage consistait à optimiser le serveur MDT/WDS existant, principalement utilisé pour le déploiement de Windows 10, afin de le rendre compatible avec de nouveaux environnements comme Windows 11, AlmaLinux et Windows Server 2025.  
+        Les scripts de configuration disponibles pour Windows 10 n’étaient pas compatibles avec Windows 11, qui se limitait à l’installation de quelques applications (Chrome, VLC, Notepad++) sans automatisation poussée.
+    </p>
+    <p>
+        J’ai développé de nouveaux scripts PowerShell et VBS permettant notamment de :
+    </p>
+    <ul class="custom-list">
+        <li>- Supprimer les applications non professionnelles (jeux, Xbox, etc.)</li>
+        <li>- Personnaliser la barre des tâches et l’explorateur de fichiers</li>
+        <li>- Automatiser des actions via la simulation de touches clavier (scripts VBS)</li>
+        <li>- Intégrer des systèmes d’exploitation supplémentaires dans le serveur MDT/WDS, dont AlmaLinux</li>
+    </ul><br>
+    <p>
+        L’objectif est d’accélérer les installations tout en fiabilisant la configuration des machines livrées aux clients.
+    </p>
+</div>
+
+
+
+
+            <div class="experience-block">
+                <h3>2024 — Jury aux Cordées de la Réussite</h3>
+                <p><strong>Lycée Gergovie – Clermont-Ferrand (63)</strong></p>
+                <p>
+                    L’objectif était d’aider des lycéens de filière professionnelle spécialisée en informatique pour leur soutenance de stage ou d’alternance.
+                    En tant que membre du jury, j’ai assisté aux oraux de plusieurs élèves, en évaluant leurs présentations et en leur donnant des conseils personnalisés pour s'améliorer.
+                </p>
+                <div class="image-container">
+                    <img src="lyc.jpg" alt="Lycée Gergovie" class="experience-image" />
+                    <p class="image-caption">   Photo du Lycée Gergovie</p>
+                </div>
             </div>
-        </div>
-    </div>
+
+            <div class="experience-block">
+                <h3>Été 2023 — Travail saisonnier à Aquò's aqui</h3>
+                <p><strong>Saint-Laurent de Muret – Lozère (48)</strong></p>
+                <p>
+                    Aquò's aqui est une étape sur le chemin de Saint-Jacques-de-Compostelle. Ma mission consistait à accueillir les randonneurs et pèlerins, leur fournir repas, produits et assistance dans un cadre convivial.
+                    Cette expérience m’a permis de développer le sens de la relation client, d’apprendre à respecter des normes strictes et de recueillir des retours très satisfaisants sur mes prestations.
+                </p>
+                <div class="image-container">
+                    <p class="image-caption">↓ Photo du stand de nourriture ↓</p>
+                    <img src="aquo.jpg" alt="Stand Aquò's aqui" class="experience-image" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rémi Combette • Portfolio personnel</p>
+    </footer>
 </body>
 </html>
-
-
